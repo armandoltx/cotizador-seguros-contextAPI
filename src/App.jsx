@@ -1,9 +1,9 @@
-
+import AppSeguro from "./compoments/AppSeguro"
 
 function App() {
 
   return (
-    <h1>App</h1>
+    <AppSeguro />
   )
 }
 
