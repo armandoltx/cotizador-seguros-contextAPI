@@ -1,7 +1,12 @@
 import { Fragment, useContext } from 'react'
 import { MARCAS, YEARS, PLANES } from '../constants'
+import CotizadorContext from '../context/CotizadorProvider'
 
 const Formulario = () => {
+
+  const { hola } = useContext(CotizadorContext)
+
+  console.log(hola)
 
   return (
     <>
