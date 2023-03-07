@@ -28,13 +28,30 @@ const CotizadorProvider = ({children}) => {
     })
   }
 
+  const cotizarSeguro = () => {
+    console.log('cotizando....')
+
+    // La base
+
+    // Obtener la diferencia de aṉos
+
+    // hay q restar un 3% por cada aṉo
+
+    // Americano base + 15%
+    // Europeo  base + 30%
+    // Asiatico base + 5%
+    // Basico base + 20%
+    // Completo base + 50%
+  }
+
   return(
     <CotizadorContext.Provider
       value={{
         datos,
         handleChangeDatos,
         error,
-        setError
+        setError,
+        cotizarSeguro
       }}
     >
       {children} {/* se refier a todos los componentes rodeados por el provider, este ha sido llamado en app.jsx*/}
