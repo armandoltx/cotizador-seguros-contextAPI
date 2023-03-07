@@ -14,6 +14,7 @@ const CotizadorProvider = ({children}) => {
     year: '',
     plan: ''
   })
+  const [error, setError] = useState('')
 
   const handleChangeDatos = e => {
     // console.log(e)
@@ -31,7 +32,9 @@ const CotizadorProvider = ({children}) => {
     <CotizadorContext.Provider
       value={{
         datos,
-        handleChangeDatos
+        handleChangeDatos,
+        error,
+        setError
       }}
     >
       {children} {/* se refier a todos los componentes rodeados por el provider, este ha sido llamado en app.jsx*/}
