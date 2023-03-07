@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-// para crear el context
+// para crear el context es una funcion
 const CotizadorContext = createContext()
 
 // esta es la funcion PROVIDER
@@ -12,7 +12,7 @@ const CotizadorProvider = ({children}) => {
     <CotizadorContext.Provider
       value={{}}
     >
-      {children}
+      {children} {/* se refier a todos los componentes rodeados por el provider, este ha sido llamado en app.jsx*/}
     </CotizadorContext.Provider>
     )
 }
