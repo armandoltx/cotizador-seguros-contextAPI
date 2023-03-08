@@ -68,7 +68,8 @@ const CotizadorProvider = ({children}) => {
         handleChangeDatos,
         error,
         setError,
-        cotizarSeguro
+        cotizarSeguro,
+        resultado
       }}
     >
       {children} {/* se refier a todos los componentes rodeados por el provider, este ha sido llamado en app.jsx*/}
