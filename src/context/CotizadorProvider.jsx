@@ -17,6 +17,7 @@ const CotizadorProvider = ({children}) => {
   })
   const [error, setError] = useState('')
   const [resultado, setResultado] = useState(0)
+  const [cargando, setCargando] = useState(false)
 
   const handleChangeDatos = e => {
     // console.log(e)
@@ -57,8 +58,15 @@ const CotizadorProvider = ({children}) => {
 
     // Formatear Dinero
     resultado = formatearDinero(resultado)
-    // console.log(resultado)
-    setResultado(resultado)
+
+    setCargando(true)
+    setTimeout(() => {
+      // console.log(resultado)
+      setResultado(resultado)
+      setCargando(false)
+    }, 3000);
+
+
   }
 
   return(
@@ -69,7 +77,8 @@ const CotizadorProvider = ({children}) => {
         error,
         setError,
         cotizarSeguro,
-        resultado
+        resultado,
+        cargando
       }}
     >
       {children} {/* se refier a todos los componentes rodeados por el provider, este ha sido llamado en app.jsx*/}
